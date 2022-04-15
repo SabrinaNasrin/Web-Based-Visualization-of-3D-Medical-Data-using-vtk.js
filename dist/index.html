@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* This is for styling the control panel and the front page */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: rgb(80, 148, 80);
+      }
+
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: white;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-left: 83%;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 100px;
+        color: white;
+      }
+      .container {
+        background-color: black;
+        padding: 10px;
+      }
+      p {
+        color: white;
+      }
+      .sliceI {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .sliceI::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .sliceJ {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .sliceJ::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .sliceK {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .sliceK::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .isoValue {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .isoValue::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .colorLevel {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .colorLevel::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .colorWindow {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .colorWindow::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .Imin {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .Imin::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .Imax {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .Imax::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .Jmin {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .Jmin::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .Jmax {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .Jmax::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .Kmin {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .Kmin::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+      .Kmax {
+        -webkit-appearance: none;
+        background: rgb(148, 147, 147);
+        height: 9px;
+        border-radius: 5px;
+      }
+      .Kmax::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 10px;
+        background: rgb(82, 116, 238);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Web Based Visualization of 3D Medical Data using vtk.js</h1>
+    <script src="./main.js"></script>
+  </body>
+</html>

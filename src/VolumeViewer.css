@@ -1,0 +1,103 @@
+.fullScreen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: black;
+    margin: 0;
+    padding: 0;
+  }  
+.fullParentSize {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+.dropButton{
+    
+    font-size: larger;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:41%;
+    margin-top: 150px;
+    margin-bottom: 250px;
+    background-image: linear-gradient(white,rgb(31, 80, 31), rgb(18, 54, 18),white);
+    border: none;
+    color: white;
+    padding: 30px 32px;
+    cursor: pointer;  
+    border-radius: 3px;  
+}
+ 
+.bigFileDrop {
+
+  cursor: pointer;
+  
+}
+
+.selector {
+  position: absolute;
+  top: 5px;
+  left: 400px;
+  transform: translate(-100%, 0px);
+  border: none;
+  
+  color: green;
+  border: none;
+} 
+
+select {
+  -moz-appearance: none;
+}
+
+select option {
+  color: black;
+}
+
+select:focus {
+  outline: none;
+  border: none;
+}
+
+.piecewiseWidget {
+  position: absolute;
+  top: calc(10px + 1em);
+  left: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.shadow {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: none;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.progress {
+  flex: none;
+  font-size: 50px;
+  color: black;
+  z-index: 1;
+  background: rgba(128,128,128,.5);
+  padding: 20px;
+  border-radius: 10px;
+  user-select: none;
+} 
+
+.fpsMonitor {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border: solid 1px gray;
+} 
